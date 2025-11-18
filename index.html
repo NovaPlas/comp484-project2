@@ -19,23 +19,26 @@
 
     <main>
       <section class="pet-image-container">
-         <!-- Replace pet image with your own pet image -->
-        <img class="pet-image" src="https://cdn.glitch.com/3aa98e05-3216-497c-a251-210ae4713a83%2Fhound.jpg?1541715339220">
+        <!-- Replace pet image with your own pet image if you like; this is treated as the "normal" photo -->
+        <img class="pet-image" src="images/Idle.PNG" alt="Your pet" tabindex="0" zoom="10">
+      
       </section>
+
       <section class="dashboard">
         <div>Name: <strong><span class="name"></span></strong></div>
         <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
         <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
+        <div>Energy: <strong><span class="energy"></span> / 10</strong></div>
+
+        <!-- NEW: visual notification area (no alerts/console) -->
+        <div id="pet-comment" class="pet-comment" role="status" aria-live="polite"></div>
+
         <div class="button-container">
-          <button class="treat-button">
-            Treat
-          </button>
-          <button class="play-button">
-            Play
-          </button>
-          <button class="exercise-button">
-            Exercise
-          </button>
+          <button class="treat-button">Treat</button>
+          <button class="play-button">Play</button>
+          <button class="exercise-button">Exercise</button>
+          <!-- NEW action button -->
+          <button class="nap-button">Nap</button>
         </div>
       </section>
     </main>
