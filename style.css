@@ -109,7 +109,7 @@ footer a {
 .pet-comment {
   margin-top: 12px;
   padding: 8px 12px;
-  display: none;            /* shown via jQuery .fadeIn/.fadeOut */
+  display: none;            /* shown via jQuery .fadeIn/ */
   background: #f0f7ff;
   border: 1px solid #b5d3ff;
   color: #0b3d91;

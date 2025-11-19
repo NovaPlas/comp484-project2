@@ -23,7 +23,7 @@ $(function () {
     .mouseout(hideHoverName);
   
 
-     $('.tired-image')
+  $('.tired-image')
     .mouseover(showNameOnHover)
     .mouseout(hideHoverName);
 
@@ -48,7 +48,7 @@ $(function () {
 var pet_info = {
   name: "Nova",
   weight: 12,      // pounds
-  happiness: 5,    // tail wags / min
+  happiness: 0,    // tail wags / min
   energy: 5        // extra stat paired with Nap action
 };
 
@@ -176,8 +176,8 @@ function speak(message) {
     .hide()
     .text(message)
     .fadeIn(200)
-    .delay(1200)
-    .fadeOut(350);
+    
+    
 }
 
 /** Show name on hover using .mouseover() */
