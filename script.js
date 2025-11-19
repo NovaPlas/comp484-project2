@@ -71,9 +71,11 @@ var NAP_SRC    = $petNap.attr('src');
 // --------- ACTIONS ---------
 function clickedTreatButton() {
   // Increase pet happiness and weight
+ // if(pet_info.weight > 20) 
   pet_info.happiness += 2;
   pet_info.weight += 1;
   pet_info.energy = Math.min(10, pet_info.energy + 1);
+
   setPhoto(FOOD_SRC);
   isHappyShown = true;
   speak("Yum! Treats make me so happy! ");
@@ -84,7 +86,7 @@ function clickedPlayButton() {
 
    if (pet_info.energy <= 0) {
     setPhoto(TIRED_SRC || NAP_SRC);
-    speak("I'm out of energy! I can't play until I rest. Try a nap or a treat.");
+    speak("I'm out of energy! I can't play until I rest.");
     setPhoto(TIRED_SRC);
     checkAndUpdatePetInfoInHtml();
     return;
@@ -94,7 +96,7 @@ function clickedPlayButton() {
   pet_info.happiness += 2;
    pet_info.weight = Math.max(0, pet_info.weight - 1);
   pet_info.energy = Math.max(0, pet_info.energy - 1);
-  setPhoto(HAPPY_SRC); // per your spec: Play -> food.png
+  setPhoto(HAPPY_SRC); 
   isHappyShown = false;
   speak("That was fun! Can we play again?");
   checkAndUpdatePetInfoInHtml();
@@ -105,7 +107,7 @@ function clickedExerciseButton() {
   // Decrease happiness, decrease weight
   if (pet_info.energy <= 0 || pet_info.energy <=1) {
     setPhoto(TIRED_SRC);
-    speak("I'm out of energy! I can't play until I rest. Try a nap or a treat.");
+    speak("I'm out of energy! I can't play until I rest.");
     checkAndUpdatePetInfoInHtml();
     return;
   }else{
