@@ -55,10 +55,10 @@ var pet_info = {
 var $petImg = $('.pet-image');
 
 
-var $petHap   = $('<img>').attr('src','images/Happy.png');
-var $petTire  = $('<img>').attr('src','images/Tired.png');   
-var $petNap   = $('<img>').attr('src','images/Nap.png');   
-var $petTreat = $('<img>').attr('src','images/Treat.png');    
+var $petHap   = $('<img>').attr('src','images/Happy.PNG');
+var $petTire  = $('<img>').attr('src','images/Tired.PNG');   
+var $petNap   = $('<img>').attr('src','images/Nap.PNG');   
+var $petTreat = $('<img>').attr('src','images/Treat.PNG');    
 
 var NORMAL_SRC = $petImg.attr('src'); // treat this as the "normal photo"
 var HAPPY_SRC  = $petHap.attr('src');
